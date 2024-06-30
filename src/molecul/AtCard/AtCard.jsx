@@ -1,20 +1,26 @@
 import './AtCard.css';
-import colorstype from '../../atoms/atColor/colortype';
 import Pokesprite from '../../atoms/poke/pokesprite';
 import AtType from '../atType/AtType';
+import AtIdPokedex from '../../atoms/atIdPokedex/AtIdPokedex';
+import AtTitle from '../../atoms/atTitle/AtTitle';
 
 function AtCard() {
     return(
 
-        <div > 
-            <div>
+        <div className='pokemoncart'> 
+            <div className='banner' style={{background: "#aaa6a6b0"}}>
                 <Pokesprite/>
-            </div>   
+            </div>
+            <div className='info'>
+                <AtIdPokedex/>
+                <AtTitle/>
             
-            <div>
+                
+            <div className='footer'>
+                <AtType/>  
                 <AtType/>  
             </div>
-
+</div>
         </div>
 
         

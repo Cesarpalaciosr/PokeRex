@@ -1,11 +1,12 @@
 
 div.type{
-    width: auto;
+    margin: 8px;
+    width: 80px;
     text-align: center;
     border-radius: 15px;
     border-style: solid;
     border-width: 2px ;
-    border-color: #E5E5E5;
+    border-color: #c5c5c5;
 }
 
 p{
