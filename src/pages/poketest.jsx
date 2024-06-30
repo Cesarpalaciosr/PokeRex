@@ -1,5 +1,6 @@
 import AtButton from '../atoms/atButton/AtButton';
 import LoadingAtom from '../atoms/atLoading/AtLoading';
+
 function Poke(){
     function handleClick () {
         console.log('hola');
@@ -59,6 +60,7 @@ function Poke(){
                 <AtButton type="button" variant="redirection" onClick={handleClick} size="sm">Hola</AtButton>
                 <AtButton type="button" variant="redirection" onClick={handleClick} size="md">Hola</AtButton>
                 <AtButton type="button" variant="redirection" onClick={handleClick} size="lg">Hola</AtButton>
+                
             </div>
         <LoadingAtom></LoadingAtom>
         </div>
