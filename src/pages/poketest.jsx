@@ -1,9 +1,13 @@
 import AtButton from '../atoms/atButton/AtButton';
 import LoadingAtom from '../atoms/atLoading/AtLoading';
+import { getAllPokemons } from '../services/pokemon';
 
 function Poke(){
     function handleClick () {
         console.log('hola');
+    }
+    function handleGetAllPokemons() {
+        getAllPokemons();
     }
     return(
         <div style={{
@@ -57,7 +61,7 @@ function Poke(){
                 <AtButton type="button" variant="test" onClick={handleClick} size="sm">Hola</AtButton>
                 <AtButton type="button" variant="test" onClick={handleClick} size="md">Hola</AtButton>
                 <AtButton type="button" variant="test" onClick={handleClick} size="lg">Hola</AtButton>
-                <AtButton type="button" variant="redirection" onClick={handleClick} size="sm">Hola</AtButton>
+                <AtButton type="button" variant="redirection" onClick={handleGetAllPokemons} size="sm" >Hola</AtButton>
                 <AtButton type="button" variant="redirection" onClick={handleClick} size="md">Hola</AtButton>
                 <AtButton type="button" variant="redirection" onClick={handleClick} size="lg">Hola</AtButton>
                 

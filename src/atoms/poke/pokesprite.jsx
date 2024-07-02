@@ -1,9 +1,17 @@
+import PropTypes from "prop-types"
 
-import './pokesprite.css';
-function Pokesprite() {
+Pokesprite.propTypes = {
+    image: PropTypes.any 
+}
+
+function Pokesprite({image}) {
     return(
-       
-            <img className='pokemon'  src="https://img.pokemondb.net/sprites/sword-shield/normal/noivern.png" alt="Company Logo"  />
+        <>
+            <div>
+                <img className='pokemon'  src={image} width="auto" height="auto" alt="Company Logo"  />
+            </div>
+
+        </>
  
         
     )
