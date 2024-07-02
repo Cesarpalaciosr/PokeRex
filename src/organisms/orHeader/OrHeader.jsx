@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from '../../assets/logo/Pokeball-header-logo.png'
+import logo from '../../assets/logo/Pokeball-header-logo.png';
 import AtButton from "../../atoms/atButton/AtButton";
 
 function OrHeader() {
@@ -7,6 +7,7 @@ function OrHeader() {
             <HeaderComponent>
                 <ImageContainer className="header__logo">
                     <img src={logo} alt="Company Logo" width="60" height="60" />
+                    
                 </ImageContainer>
                 <div></div>
                 <RedirectionContainer>
