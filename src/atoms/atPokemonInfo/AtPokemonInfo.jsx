@@ -11,7 +11,7 @@ function AtPokemonInfo({PokemonId, PokemonName, PokemonTypes}) {
             <p className='NamePokedex'>Name: {PokemonName}</p>
             {/* <typ className='type' style={{background: colorstype.fighting}}>     */}
                 {PokemonTypes.map( type => {
-                        return <TypeLabel key={type.slot}> {type.type.name}</TypeLabel>
+                        return <TypeLabel key={type.slot}>{type.type.name}</TypeLabel>
                     }
                 )}  
             {/* </typ> */}
@@ -31,9 +31,9 @@ const TypeLabel = styled.label`
     margin-right: 15px;
     color: black;
     background-color: aqua
-    ${'' /* background-color: ${(props) => colorstype[props.PokemonTypes.type.type.name] || 'fire'} */}
+    ${'' /* background-color: ${(props) => colorstype[props.type.type.name] || 'fire'} */}
 `;
 
 
 
-export default AtPokemonInfo
+export default AtPokemonInfo;
