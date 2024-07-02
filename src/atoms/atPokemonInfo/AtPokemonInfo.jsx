@@ -1,15 +1,15 @@
 // import styled from "styled-components"
 import './style.css';
 import styled from 'styled-components';
-// import colorstype from '../../atoms/atColor/colortype';
+import colorstype from '../../atoms/atColor/colortype';
 import PropTypes from "prop-types";
 
 function AtPokemonInfo({PokemonId, PokemonName, PokemonTypes}) {
     return (
         <>
             <p className='NumPokedex'>N.º {PokemonId}</p>
-            <p className='NamePokedex'>Name: {PokemonName}</p>
-            {/* <typ className='type' style={{background: colorstype.fighting}}>     */}
+            <p className='NamePokedex' style={{ fontWeight:'bold'}}>{PokemonName}</p>
+            {/* <typ className='type' style={{background: colorstype['fighting']}}>     */}
                 {PokemonTypes.map( type => {
                         return <TypeLabel key={type.slot}>{type.type.name}</TypeLabel>
                     }
@@ -27,13 +27,13 @@ AtPokemonInfo.propTypes = {
 
 const TypeLabel = styled.label`
     font-size: 28px;
-    border-radius: 8px;
+    border-radius: 16px;
     margin-right: 15px;
-    color: black;
-    background-color: aqua
-    ${'' /* background-color: ${(props) => colorstype[props.type.type.name] || 'fire'} */}
+    padding: 12px;
+    border: 1px solid black;
+    color: white;
+    background-color: ${(props) => colorstype[props.children  || 'fire']};
 `;
-
 
 
 export default AtPokemonInfo;
