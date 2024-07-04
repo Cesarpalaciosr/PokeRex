@@ -1,10 +1,10 @@
 import './AtLoading.css';
 
-function LoadingAtom() {
+const AtLoading = () => {
     return(
         <div className="spinner">
         </div>
     )
 }
 
-export default LoadingAtom;
+export default AtLoading;

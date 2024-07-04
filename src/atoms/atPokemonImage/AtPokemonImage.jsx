@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 
-Pokesprite.propTypes = {
+AtPokemonImage.propTypes = {
     image: PropTypes.any 
 }
 
-function Pokesprite({image}) {
+function AtPokemonImage({image}) {
     return(
         <>
             <div>
@@ -17,4 +17,4 @@ function Pokesprite({image}) {
     )
 }
 
-export default Pokesprite;
+export default AtPokemonImage;

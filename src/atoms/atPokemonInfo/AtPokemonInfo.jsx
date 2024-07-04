@@ -1,7 +1,7 @@
 // import styled from "styled-components"
 import './style.css';
 import styled from 'styled-components';
-import colorstype from '../../atoms/atColor/colortype';
+import colorstype from '../../utils/colortype';
 import PropTypes from "prop-types";
 
 function AtPokemonInfo({PokemonId, PokemonName, PokemonTypes}) {

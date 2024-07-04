@@ -1,5 +1,5 @@
 import AtButton from '../atoms/atButton/AtButton';
-import LoadingAtom from '../atoms/atLoading/AtLoading';
+import AtLoading from '../atoms/atLoading/AtLoading';
 import { getAllPokemons } from '../services/pokemon';
 
 function Poke(){
@@ -66,7 +66,7 @@ function Poke(){
                 <AtButton type="button" variant="redirection" onClick={handleClick} size="lg">Hola</AtButton>
                 
             </div>
-        <LoadingAtom></LoadingAtom>
+        <AtLoading></AtLoading>
         </div>
     )
 }
