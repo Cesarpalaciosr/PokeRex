@@ -16,7 +16,24 @@ const colorstype = {
     dark: "#4E382A",
     ice:"#A3E5FD",
     steel:"#B0B0BD",
-    ghost:"#5D5FB0"
-};
+    ghost:"#5D5FB0",
+    "light": "#f8f9fa",
+    "test": "#0dcaf0",
+    "redirection": "transparent",
+    "evolutions": "#7C1683",
+    // "dark": "#212529",
+    "moves": "#0d6efd",
+    "locations": "#6c757d",
+};  
+const variantSizePadding = {
+    "sm":"1.1rem",
+    "md":"1.4rem",
+    "lg":"1.6rem"
+} 
 
-export default colorstype;
+export { 
+    colorstype,
+    variantSizePadding
+
+
+};

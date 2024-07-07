@@ -23,13 +23,13 @@ function OrHeader() {
 const HeaderComponent = styled.div`
     ${'' /* background-color: #242424; */}
     background-color: #343434;
-    width: 100vw;
+    min-width: 98vw;
     margin: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: #fff;
+    ${'' /* background-color: #333; */}
+    ${'' /* color: #fff; */}
     ${'' /* padding: 0 45px 0 30px; */}
 `;
 
@@ -39,6 +39,6 @@ const ImageContainer = styled.div`
     padding-left: 15px
 `
 const RedirectionContainer = styled.div`
-    padding-right: 30px
+    ${'' /* padding-right: 30px */}
 `;
 export default OrHeader;

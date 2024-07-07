@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-
+import {colorstype, variantSizePadding} from "../../utils/constStyles";
 const AtButton = ({
   type,
   variant,
@@ -58,13 +58,7 @@ const ButtonComponent = styled.button.withConfig({
   border-radius: 0.3rem;
   padding: 0
     ${(props) =>
-      props.size === "sm"
-        ? "1.1rem"
-        : props.size === "md"
-        ? "1.4rem"
-        : props.size === "lg"
-        ? "1.6rem"
-        : "1.1rem"};
+      variantSizePadding[props.size] || "1.1rem"};
   height: ${(props) =>
     props.size === "sm"
       ? "34px"
@@ -74,24 +68,13 @@ const ButtonComponent = styled.button.withConfig({
       ? "45px"
       : "34px"};
   font-weight: 500;
+  text-shadow: -0.5px -0.5px 0 #333, 0.5px -0.5px 0 #333, -0.5px 0.5px 0 #333, 0.5px 0.5px 0 #333;
   border: 1px solid transparent;
   background-color: ${(props) =>
-    props.variant === "light"
-      ? "#f8f9fa"
-      : props.variant === "dark"
-      ? "#212529"
-      : props.variant === "moves"
-      ? "#0d6efd"
-      : props.variant === "locations"
-      ? "#6c757d"
-      : props.variant === "redirection"
-      ? "transparent"
-      : props.variant === "test"
-      ? "#0dcaf0"
-      : "#f8f9fa"};
+    colorstype[props.variant] || "#f8f9fa"};
   color: ${(props) =>
     props.variant === "light"
-      ? "#212529"
+      ? "#ffffff"
       : props.variant === "dark"
       ? "#ffffff"
       : props.variant === "moves"
@@ -99,7 +82,7 @@ const ButtonComponent = styled.button.withConfig({
       : props.variant === "locations"
       ? "#ffffff"
       : props.variant === "evolutions"
-      ? "#456541"
+      ? "#ffffff"
       : props.variant === "redirection"
       ? "ffffff"
       : props.variant === "test"
