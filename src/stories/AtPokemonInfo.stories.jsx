@@ -1,9 +1,5 @@
 import AtPokemonInfo from "../atoms/atPokemonInfo/AtPokemonInfo";
 
-import { fn } from "@storybook/test";
-
-
-
 export default {
   component: AtPokemonInfo,
   title: 'AtPokemonInfo',

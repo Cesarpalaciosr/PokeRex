@@ -1,7 +1,7 @@
 // import styled from "styled-components"
 import './style.css';
 import styled from 'styled-components';
-import colorstype from '../../utils/colortype';
+import {colorstype} from '../../utils/constStyles';
 import PropTypes from "prop-types";
 
 function AtPokemonInfo({PokemonId, PokemonName, PokemonTypes}) {
@@ -26,7 +26,7 @@ AtPokemonInfo.propTypes = {
 }
 
 const TypeLabel = styled.label`
-    font-size: 28px;
+    font-size: 20px;
     border-radius: 16px;
     margin-right: 15px;
     padding: 12px;

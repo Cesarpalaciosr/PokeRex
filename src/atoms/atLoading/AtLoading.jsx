@@ -2,8 +2,10 @@ import './AtLoading.css';
 
 const AtLoading = () => {
     return(
-        <div className="spinner">
-        </div>
+        <section className='spinner_container'>
+            <div className="spinner">
+            </div>
+        </section>
     )
 }
 
