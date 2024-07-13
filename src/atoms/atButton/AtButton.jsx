@@ -84,7 +84,7 @@ const ButtonComponent = styled.button.withConfig({
       : props.variant === "evolutions"
       ? "#ffffff"
       : props.variant === "redirection"
-      ? "ffffff"
+      ? "#ffffff"
       : props.variant === "test"
       ? "#ffffff"
       : "#212529"};

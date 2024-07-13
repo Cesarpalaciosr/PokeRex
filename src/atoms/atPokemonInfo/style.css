@@ -17,24 +17,3 @@ p.NumPokedex{
     border-width: 2px ;
     border-color: #c5c5c5;
 } */
-
-div.pokemoncart{
-    background-color: #ffff;
-    margin-top:5px;
-    margin-bottom:5px;
-    margin-left: 6px;
-    margin-right: 6px;
-}
-
-div.banner{
-    text-align: center;
-}
-
-div.info{
-    margin: 5px;
-}
-
-div.footer{
-     display: flex;
-
-}

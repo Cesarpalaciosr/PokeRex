@@ -6,16 +6,27 @@ import PropTypes from "prop-types";
 
 function AtPokemonInfo({PokemonId, PokemonName, PokemonTypes}) {
     return (
-        <>
+        <InfoContainer>
             <p className='NumPokedex'>N.º {PokemonId}</p>
-            <p className='NamePokedex' style={{ fontWeight:'bold'}}>{PokemonName}</p>
-            {/* <typ className='type' style={{background: colorstype['fighting']}}>     */}
+            <p className='NamePokedex' style={{ 
+                            fontSize: '30px',
+                            marginBottom: '15px',
+                            color: 'black',
+                            fontWeight: 'bold',
+                            fontFamily: "Pixelify Sans",
+                            fontOpticalSizing: 'auto',
+                            fontStyle: 'normal',
+                            textTransform: 'capitalize'         }}>{PokemonName}</p>
+            <LabelContainer>
+
                 {PokemonTypes.map( type => {
-                        return <TypeLabel key={type.slot}>{type.type.name}</TypeLabel>
+                        return <TypeLabelContainer key={type.slot} color={type.type.name}>
+                                        <TypeLabel>{type.type.name}</TypeLabel>
+                                </TypeLabelContainer>
                     }
                 )}  
-            {/* </typ> */}
-        </>
+            </LabelContainer>
+        </InfoContainer>
     )    
 }
 
@@ -26,14 +37,40 @@ AtPokemonInfo.propTypes = {
 }
 
 const TypeLabel = styled.label`
+    display: inline;
     font-size: 20px;
-    border-radius: 16px;
-    margin-right: 15px;
-    padding: 12px;
-    border: 1px solid black;
+    font-weight: bold;
+    font-family: "Pixelify Sans";
+    text-transform: capitalize;
+    font-optical-sizing: 'auto';
+    font-style: 'normal';
     color: white;
-    background-color: ${(props) => colorstype[props.children  || 'fire']};
+    text-shadow: 1px 1px 2px black;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+    
 `;
 
+const InfoContainer = styled.div`
+    padding-left:7px;
+    ${'' /* padding-bottom: 55px; */}
+`;
+
+const TypeLabelContainer = styled.div`
+        display:flex;
+        justify-content:center;
+        border-radius: 5px;    
+        margin-right: 15px;
+        border: 3px solid #3333;
+        width: 90px;
+        background-color: ${(props) => colorstype[props.color  || 'fire']};
+`
+
+const LabelContainer = styled.div`
+    width:  20px;
+    display:    grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+`
 
 export default AtPokemonInfo;

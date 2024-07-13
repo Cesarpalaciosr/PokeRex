@@ -7,9 +7,17 @@ function OrHeader() {
             <HeaderComponent>
                 <ImageContainer className="header__logo">
                     <img src={logo} alt="Company Logo" width="60" height="60" />
-                    
+                    <div>
+                        <label style={{
+                            fontSize: '34px',
+                            marginLeft: '15px',
+                            color: '#ffffffff',
+                            fontWeight: 'bold',
+                            fontFamily: "Pixelify Sans",
+                            fontOpticalSizing: 'auto',
+                            fontStyle: "normal"                        }}>PokeRex</label>
+                    </div>
                 </ImageContainer>
-                <div></div>
                 <RedirectionContainer>
                     <AtButton variant="redirection" size="sm">Nosotros</AtButton>
                     <AtButton variant="redirection" size="sm">texto de ejemplo</AtButton>
