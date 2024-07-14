@@ -1,5 +1,6 @@
-import AtButton from '../atoms/atButton/AtButton';
-import AtLoading from '../atoms/atLoading/AtLoading';
+import AtButton from '../components/atoms/atButton/AtButton';
+import AtLoading from '../components/atoms/atLoading/AtLoading';
+import SearchBar from '../components/molecules/SearchBar/SearchBar';
 import { getAllPokemons } from '../services/pokemon';
 
 function Poke(){
@@ -66,7 +67,8 @@ function Poke(){
                 <AtButton type="button" variant="redirection" onClick={handleClick} size="lg">Hola</AtButton>
                 
             </div>
-        <AtLoading></AtLoading>
+        <AtLoading/>
+        <SearchBar/>
         </div>
     )
 }

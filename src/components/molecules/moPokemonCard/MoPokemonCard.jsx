@@ -1,5 +1,6 @@
 import AtPokemonImage from '../../atoms/atPokemonImage/AtPokemonImage';
 import AtPokemonInfo from '../../atoms/atPokemonInfo/AtPokemonInfo';
+import { CardAnimation } from '../../../utils/keyFrames';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
 
@@ -24,7 +25,7 @@ MoPokemonCard.propTypes = {
 }
 const ContainerPokemonCard = styled.section`
     background-color: #ffff;
-    height: 300px;
+    height: 280px;
     width: 300px;
     border-radius:20px;
     overflow: hidden;
@@ -32,5 +33,11 @@ const ContainerPokemonCard = styled.section`
     margin-bottom:5px;
     margin-left: 6px;
     margin-right: 6px;
+    
+    view-timeline-name: --reveal;
+    animation-name: ${CardAnimation};
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
 `
 export default MoPokemonCard;

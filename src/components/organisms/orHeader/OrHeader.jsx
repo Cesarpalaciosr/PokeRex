@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import logo from '../../assets/logo/Pokeball-header-logo.png';
+import logo from '../../../assets/logo/Pokeball-header-logo.png';
 import AtButton from "../../atoms/atButton/AtButton";
+import SearchBar from "../../molecules/SearchBar/SearchBar";
 
 function OrHeader() {
     return (
@@ -18,6 +19,9 @@ function OrHeader() {
                             fontStyle: "normal"                        }}>PokeRex</label>
                     </div>
                 </ImageContainer>
+                <div>
+                    <SearchBar/>
+                </div>
                 <RedirectionContainer>
                     <AtButton variant="redirection" size="sm">Nosotros</AtButton>
                     <AtButton variant="redirection" size="sm">texto de ejemplo</AtButton>
@@ -33,6 +37,8 @@ const HeaderComponent = styled.div`
     background-color: #343434;
     min-width: 98vw;
     margin: 0px;
+    position: sticky; top: 0;
+    z-index:2;
     display: flex;
     justify-content: space-between;
     align-items: center;

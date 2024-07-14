@@ -1,6 +1,6 @@
-import OrHeader from "../organisms/orHeader/OrHeader";
+import OrHeader from "../components/organisms/orHeader/OrHeader";
+import MoPokemonCard from "../components/molecules/moPokemonCard/MoPokemonCard";
 import styled from "styled-components";
-import MoPokemonCard from "../molecules/moPokemonCard/MoPokemonCard";
 
 function AboutPage() {
     return(

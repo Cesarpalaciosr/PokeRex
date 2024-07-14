@@ -1,7 +1,7 @@
 import { useState, } from 'react';
 import {FaSearch} from "react-icons/fa"
 import './SearchBar.css'
-import {getAllProducts,} from '../../api/products.api';
+// import {getAllProducts,} from '../../api/products.api';
 
 
 function SearchBar({setResults}){
@@ -36,15 +36,12 @@ function SearchBar({setResults}){
     };
 
     return(
-  
             <div className='input-wrapper'>
-                <input placeholder='recetas' 
+                <input placeholder='Buscar Pokemon' 
                 value={input} 
                 onChange={(e) => handleChange(e.target.value)} />
                     <FaSearch id='search-icon'/>
             </div>
-           
- 
     );
 
 }
