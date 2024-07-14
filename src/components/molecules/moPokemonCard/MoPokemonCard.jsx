@@ -33,11 +33,14 @@ const ContainerPokemonCard = styled.section`
     margin-bottom:5px;
     margin-left: 6px;
     margin-right: 6px;
+    transition: 0.3s;
     
-    view-timeline-name: --reveal;
-    animation-name: ${CardAnimation};
-    animation-fill-mode: both;
-    animation-timeline: --reveal;
-    animation-range: entry 25% cover 50%;
+
+    &:hover{
+        transition:0.4s;
+        height: 300px;
+        width: 320px;
+    }
+
 `
 export default MoPokemonCard;
