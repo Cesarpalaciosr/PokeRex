@@ -52,10 +52,7 @@ function OrPokemonGrid() {
 }
 
     const PokemonGrid = styled.div`
-        ${'' /* padding:15px; */}
         display: grid;
-        ${'' /* margin: 0  auto 0 auto; */}
-        ${'' /* justify-content:center; */}
         justify-items:center;
         grid-template-columns: 
             repeat( 
