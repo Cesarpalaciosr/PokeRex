@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components"
 import MoPokemonCard from "../../molecules/moPokemonCard/MoPokemonCard";
 import AtLoading from '../../atoms/atLoading/AtLoading';
-import { getAllPokemons } from "../../services/pokemon";
+import { getAllPokemons } from "../../../services/pokemon";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 function OrPokemonGrid() {
@@ -52,9 +52,16 @@ function OrPokemonGrid() {
 }
 
     const PokemonGrid = styled.div`
-        padding:15px;
+        ${'' /* padding:15px; */}
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        ${'' /* margin: 0  auto 0 auto; */}
+        ${'' /* justify-content:center; */}
+        justify-items:center;
+        grid-template-columns: 
+            repeat( 
+                auto-fit, 
+                minmax(300px, 1fr)
+            );
         grid-gap: 10px;
     `;
 

@@ -1,12 +1,23 @@
-.spinner_container{
+import { FrameSpin } from '../../../utils/keyFrames';
+import styled from 'styled-components';
+const AtLoading = () => {
+    return(
+        <SpinerContanier>
+            <Spinner/>
+        </SpinerContanier>
+    )
+}
+
+const SpinerContanier = styled.section`
     display: flex;
     flex-direction: column;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     min-height: 20vh;
-}
-.spinner{
+`
+
+const Spinner = styled.div`
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -22,11 +33,7 @@
         0
     );
     
-    animation: spin 0.8s infinite linear;
-}
+    animation: ${FrameSpin} 0.8s infinite linear;`
 
-@keyframes spin{
-    to{
-        transform: rotate(1turn);
-    }
-}
+
+export default AtLoading;

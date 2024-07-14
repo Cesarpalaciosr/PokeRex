@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Hind+Siliguri:wght@300;400;500;600;700&family=Pixelify+Sans:wght@400..700&display=swap');
 
 *{
-  font-family: "Pixelify Sans",
+  font-family: "Pixelify Sans";
+  scrollbar-width: 0.5px;
+  scrollbar-color: rgba(58, 33, 129, 0.432) rgba(0, 0, 0, .0);
 }
 
 body {  
