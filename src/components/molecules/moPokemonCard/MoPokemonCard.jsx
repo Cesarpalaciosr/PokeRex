@@ -1,24 +1,21 @@
 import AtPokemonImage from '../../atoms/atPokemonImage/AtPokemonImage';
 import AtPokemonInfo from '../../atoms/atPokemonInfo/AtPokemonInfo';
+import { CardAnimation } from '../../../utils/keyFrames';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
-import AtModal from '../../atoms/atModal/atModal';
+
 
 function MoPokemonCard({pokemon}) {
     return(
-        <ContainerPokemonCard className='pokemoncard' onClick={() => setIsPop20pen(!isPop20pen)}> 
+        <ContainerPokemonCard className='pokemoncard'> 
                 <AtPokemonImage bgColor={pokemon.types[0].type.name} image={pokemon.sprites.front_default}/>
                 <div className='info'>
                         <AtPokemonInfo 
                             PokemonId={pokemon.id.toString().padStart(6, '0')} 
                             PokemonName={pokemon.name} 
                             PokemonTypes={pokemon.types}/>
-                            
                 </div>
-
-
         </ContainerPokemonCard>
-
     )
 }
 

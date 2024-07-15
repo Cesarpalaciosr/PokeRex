@@ -1,15 +1,16 @@
 import OrHeader from "../components/organisms/orHeader/OrHeader";
 import MoPokemonCard from "../components/molecules/moPokemonCard/MoPokemonCard";
 import styled from "styled-components";
-
+import Footer from "../components/atoms/atFooter/Footer";
 function AboutPage() {
     return(
+        <>
         <AboutPageStyle>
             <OrHeader/>
-            <div>
-            <MoPokemonCard/> 
-            </div>
+            
         </AboutPageStyle>
+        <Footer/>
+        </>
     );
 }
 
