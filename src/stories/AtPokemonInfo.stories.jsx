@@ -1,4 +1,4 @@
-import AtPokemonInfo from "../atoms/atPokemonInfo/AtPokemonInfo";
+import AtPokemonInfo from "../components/atoms/atPokemonInfo/AtPokemonInfo";
 
 export default {
   component: AtPokemonInfo,

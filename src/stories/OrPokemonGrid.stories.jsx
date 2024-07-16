@@ -1,4 +1,4 @@
-import OrPokemonGrid from "../organisms/orPokemonGrid/OrPokemonGrid";
+import OrPokemonGrid from "../components/organisms/orPokemonGrid/OrPokemonGrid";
 
 
 export default {

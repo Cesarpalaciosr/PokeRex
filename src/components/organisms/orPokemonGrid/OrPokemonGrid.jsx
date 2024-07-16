@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { PokemonGrid } from "../../../utils/TagsStyledComponent";
 import MoPokemonCard from "../../molecules/moPokemonCard/MoPokemonCard";
 import AtLoading from '../../atoms/atLoading/AtLoading';
-import AtModal from "../orModal/orModal";
+import OrModal from "../orModal/orModal";
 import { getAllPokemons } from "../../../services/pokemon";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -61,9 +61,9 @@ function OrPokemonGrid() {
                     }
                 )}
                 {showModal && (
-                    <AtModal pokemon={selectedItem}
+                    <OrModal pokemon={selectedItem}
                     handleClose={handleCloseModal}
-                    >{'Hola mundo'}</AtModal>
+                    >{'Hola mundo'}</OrModal>
                 )}
             </PokemonGrid>
         </InfiniteScroll>

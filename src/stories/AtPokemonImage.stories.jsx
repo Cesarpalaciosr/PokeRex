@@ -1,4 +1,4 @@
-import AtPokemonImage from "../atoms/atPokemonImage/AtPokemonImage";
+import AtPokemonImage from "../components/atoms/atPokemonImage/AtPokemonImage";
 
 export default {
     component: AtPokemonImage,

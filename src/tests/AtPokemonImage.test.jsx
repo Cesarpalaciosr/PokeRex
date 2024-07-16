@@ -1,7 +1,7 @@
 // import { fireEvent, render } from "@testing-library/react";
 import { /*fireEvent,*/ render } from "@testing-library/react";
 import { describe, it} from "vitest";
-import AtPokemonImage from "../atoms/atPokemonImage/AtPokemonImage";
+import AtPokemonImage from "../components/atoms/atPokemonImage/AtPokemonImage";
 
 describe('AtPokemonImage', () => {
     

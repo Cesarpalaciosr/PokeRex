@@ -1,8 +1,8 @@
-import MoPokemonCard from "../components/molecules/moPokemonCard/MoPokemonCard";
+import OrModal from '../components/organisms/orModal/orModal';
 
 export default {
-    component: MoPokemonCard,
-    title: 'MoPokemonCard',
+    component: OrModal,
+    title: 'OrModal',
     tags: ['autodocs'],
     //👇 Our exports that end in "Data" are not stories.
     excludeStories: /.*Data$/,

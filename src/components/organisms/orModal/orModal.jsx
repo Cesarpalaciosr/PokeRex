@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import AtPokemonInfo from '../../atoms/atPokemonInfo/AtPokemonInfo';
 
 
-function AtModal({handleClose, pokemon}) {
+function OrModal({handleClose, pokemon}) {
     return(
         <Modal>
             <ModalContent>
@@ -24,7 +24,7 @@ function AtModal({handleClose, pokemon}) {
             )
 }
 
-AtModal.propTypes = {
+OrModal.propTypes = {
     pokemon: PropTypes.any,
     handleClose: PropTypes.func
 }
@@ -55,4 +55,4 @@ const ModalContent = styled.div`
     width: 80%;
   }
 `;
-export default AtModal;
+export default OrModal;

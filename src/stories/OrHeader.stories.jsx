@@ -1,4 +1,4 @@
-import OrHeader from "../organisms/orHeader/OrHeader";
+import OrHeader from "../components/organisms/orHeader/OrHeader";
 
 
 export default {
