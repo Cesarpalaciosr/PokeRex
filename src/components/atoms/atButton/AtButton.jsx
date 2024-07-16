@@ -26,16 +26,7 @@ const AtButton = ({
 
 AtButton.propTypes = {
   type: PropTypes.oneOf(["button", "submit", "reset"]),
-  variant: PropTypes.oneOf([
-    "primary",
-    "light",
-    "dark",
-    "moves",
-    "locations",
-    "evolutions",
-    "redirection",
-    "test",
-  ]),
+  variant: PropTypes.any,
   className: PropTypes.string,
   size: PropTypes.string,
   id: PropTypes.string,

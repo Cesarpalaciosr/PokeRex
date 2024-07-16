@@ -85,4 +85,15 @@ const LabelContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
 `;
 
-export { ButtonComponent, LabelContainer, InfoContainer, TypeLabel, TypeLabelContainer};
+const PokemonGrid = styled.div`
+display: grid;
+justify-items:center;
+grid-template-columns: 
+    repeat( 
+        auto-fit, 
+        minmax(300px, 1fr)
+    );
+grid-gap: 10px;
+`;
+
+export { ButtonComponent, LabelContainer, InfoContainer, TypeLabel, TypeLabelContainer, PokemonGrid};

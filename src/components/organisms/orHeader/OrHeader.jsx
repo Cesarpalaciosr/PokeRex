@@ -2,11 +2,19 @@ import styled from "styled-components";
 import logo from '../../../assets/logo/Pokeball-header-logo.png';
 import AtButton from "../../atoms/atButton/AtButton";
 import SearchBar from "../../molecules/SearchBar/SearchBar";
+import { useNavigate } from "react-router-dom";
 
 function OrHeader() {
+    const navigate = useNavigate();
+    const handleAbout = () => {
+        navigate('/about');
+      };
+    const handleHome = () => {
+        navigate('/');
+      };
     return (
             <HeaderComponent>
-                <ImageContainer className="header__logo">
+                <ImageContainer className="header__logo" onClick={handleHome}>
                     <img src={logo} alt="Company Logo" width="60" height="60" />
                     <div>
                         <label style={{
@@ -23,9 +31,8 @@ function OrHeader() {
                     <SearchBar/>
                 </div>
                 <RedirectionContainer>
-                    <AtButton variant="redirection" size="sm">Nosotros</AtButton>
-                    <AtButton variant="redirection" size="sm">texto de ejemplo</AtButton>
-                    <AtButton variant="redirection" size="sm">xd</AtButton>
+                    <AtButton variant="redirection" size="sm" onClick={handleHome}>Home</AtButton>
+                    <AtButton variant="redirection" size="sm" onClick={handleAbout}>About Us</AtButton>
                 </RedirectionContainer>
 
             </HeaderComponent>
