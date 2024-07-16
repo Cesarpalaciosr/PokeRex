@@ -5,7 +5,10 @@ import AtLoading from '../../atoms/atLoading/AtLoading';
 import { getAllPokemons } from "../../../services/pokemon";
 import InfiniteScroll from "react-infinite-scroll-component";
 
+import AtModal from "../../atoms/atModal/atModal";
+
 function OrPokemonGrid() {
+    const [showModal, setShowModal] = useState(false);
     const [pokemons, setPokemons] = useState([]);
     const [offset, setOffset] = useState(0);
     const [limit, setLimit] = useState(20); // Establece el límite inicial
@@ -27,8 +30,14 @@ function OrPokemonGrid() {
     const fetchMoreData = () => {
         setOffset((prevOffset) => prevOffset + limit);
     };
+    const handleCloseModal = () => {
+        setShowModal(false);
+      };
     
     
+    const handleClick= () => {console.log('open modal'); setShowModal(true);}
+    
+
     return (
         <InfiniteScroll
         dataLength={pokemons.length}
@@ -43,10 +52,16 @@ function OrPokemonGrid() {
         >
             <PokemonGrid>
                 {pokemons.map(pokemon =>{
-                        return <MoPokemonCard key={pokemon.id} pokemon={pokemon}/>;
+                        return <MoPokemonCard key={pokemon.id} pokemon={pokemon} onClick={handleClick}/>;
                     }
                 )}
             </PokemonGrid>
+            {showModal && (
+                <AtModal
+                handleClose={handleCloseModal}
+                >{'Hola mundo'}</AtModal>
+            )}
+ 
         </InfiniteScroll>
     );
 }

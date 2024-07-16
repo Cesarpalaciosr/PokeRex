@@ -1,40 +1,43 @@
 
 import styled from 'styled-components';
 
-function AtModal({handleClose,show,children}) {
+function AtModal({handleClose, children}) {
     return(
-        <ModalDiv block={show ? 'block' : 'none'} >
-            <ContentDiv>
+        <Modal>
+            <ModalContent>
                 {children}
                 <button onClick={handleClose}>close</button>
-            </ContentDiv>
+            </ModalContent>
 
-        </ModalDiv>
-        
-    )
+        </Modal>
+            )
 }
 
 
+// Styled Components
+const Modal = styled.div`
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-const ModalDiv = styled.div`
-    display: $(p=> p.block && p.black)
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-`
+const ModalContent = styled.div`
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
 
-
-const ContentDiv = styled.div`
-    positin: fixed;
-    background:white;
-    width: 50%;
-    heigth: auto;
-    top: 160px;
-    left: 50%;
-    padding: 2rem;
-    transform: translate(-50%, -50%);
-`
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+`;
 export default AtModal;
