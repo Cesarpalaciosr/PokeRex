@@ -4,24 +4,25 @@ import { CardAnimation } from '../../../utils/keyFrames';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
 
-function MoPokemonCard({pokemon}) {
+
+function MoPokemonCard({pokemon, onClick}) {
     return(
-        <ContainerPokemonCard className='pokemoncard'> 
+        <ContainerPokemonCard onClick={onClick}> 
                 <AtPokemonImage bgColor={pokemon.types[0].type.name} image={pokemon.sprites.front_default}/>
-                <div className='info'>
+                <div>
                         <AtPokemonInfo 
                             PokemonId={pokemon.id.toString().padStart(6, '0')} 
                             PokemonName={pokemon.name} 
                             PokemonTypes={pokemon.types}/>
                 </div>
         </ContainerPokemonCard>
-        
     )
 }
 
 
 MoPokemonCard.propTypes = {
-    pokemon: PropTypes.any 
+    pokemon: PropTypes.any,
+    onClick: PropTypes.func
 }
 const ContainerPokemonCard = styled.section`
     background-color: #ffff;
