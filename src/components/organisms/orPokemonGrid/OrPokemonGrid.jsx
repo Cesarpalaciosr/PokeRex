@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components"
+import { PokemonGrid } from "../../../utils/TagsStyledComponent";
 import MoPokemonCard from "../../molecules/moPokemonCard/MoPokemonCard";
 import AtLoading from '../../atoms/atLoading/AtLoading';
+import AtModal from "../orModal/orModal";
 import { getAllPokemons } from "../../../services/pokemon";
 import InfiniteScroll from "react-infinite-scroll-component";
 
+
 function OrPokemonGrid() {
+    const [showModal, setShowModal] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
     const [pokemons, setPokemons] = useState([]);
     const [offset, setOffset] = useState(0);
     const [limit, setLimit] = useState(20); // Establece el límite inicial
@@ -27,8 +31,16 @@ function OrPokemonGrid() {
     const fetchMoreData = () => {
         setOffset((prevOffset) => prevOffset + limit);
     };
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setSelectedItem(null);
+    };
     
-    
+    const handleItemClick = (pokemonItem) => {
+        setSelectedItem(pokemonItem);
+        setShowModal(true);
+    };
+
     return (
         <InfiniteScroll
         dataLength={pokemons.length}
@@ -43,23 +55,19 @@ function OrPokemonGrid() {
         >
             <PokemonGrid>
                 {pokemons.map(pokemon =>{
-                        return <MoPokemonCard key={pokemon.id} pokemon={pokemon}/>;
+                        return (
+                            <MoPokemonCard key={pokemon.id} pokemon={pokemon} onClick={()=> handleItemClick(pokemon)}/>
+                        );
                     }
+                )}
+                {showModal && (
+                    <AtModal pokemon={selectedItem}
+                    handleClose={handleCloseModal}
+                    >{'Hola mundo'}</AtModal>
                 )}
             </PokemonGrid>
         </InfiniteScroll>
     );
 }
-
-    const PokemonGrid = styled.div`
-        display: grid;
-        justify-items:center;
-        grid-template-columns: 
-            repeat( 
-                auto-fit, 
-                minmax(300px, 1fr)
-            );
-        grid-gap: 10px;
-    `;
 
 export default OrPokemonGrid;
