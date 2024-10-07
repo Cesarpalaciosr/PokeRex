@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { PokemonGrid } from "../../../utils/TagsStyledComponent";
-import MoPokemonCard from "../../molecules/moPokemonCard/MoPokemonCard";
-import AtLoading from '../../atoms/atLoading/AtLoading';
-import OrModal from "../orModal/orModal";
+import MoPokemonCard from "../../molecules/MoPokemonCard/MoPokemonCard";
+import AtLoading from '../../atoms/AtLoading/AtLoading';
+import OrModal from "../OrModal/orModal";
 import { getAllPokemons } from "../../../services/pokemon";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -12,7 +12,7 @@ function OrPokemonGrid() {
     const [selectedItem, setSelectedItem] = useState(null);
     const [pokemons, setPokemons] = useState([]);
     const [offset, setOffset] = useState(0);
-    const [limit, setLimit] = useState(20); // Establece el límite inicial
+    const [limit] = useState(20); // Establece el límite inicial
     const [hasMore, setHasMore] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {

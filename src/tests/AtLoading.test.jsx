@@ -1,7 +1,7 @@
 // import { fireEvent, render } from "@testing-library/react";
 import { /*fireEvent,*/ render } from "@testing-library/react";
 import { describe, it} from "vitest";
-import AtLoading from "../components/atoms/atLoading/AtLoading"
+import AtLoading from "../components/atoms/AtLoading/AtLoading"
 
 describe('AtLoading', () => {
     // beforeEach(()=>{

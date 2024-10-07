@@ -1,6 +1,6 @@
-import OrHeader from "../components/organisms/orHeader/OrHeader";
+import OrHeader from "../components/organisms/OrHeader/OrHeader";
 import styled from "styled-components";
-import Footer from "../components/organisms/orFooter/Footer";
+import Footer from "../components/organisms/OrFooter/Footer";
 
 function AboutPage() {
     return(

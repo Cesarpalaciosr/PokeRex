@@ -1,4 +1,4 @@
-import MoPokemonCard from "../components/molecules/moPokemonCard/MoPokemonCard";
+import MoPokemonCard from "../components/molecules/MoPokemonCard/MoPokemonCard";
 
 export default {
     component: MoPokemonCard,

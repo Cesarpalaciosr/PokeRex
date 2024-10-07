@@ -1,5 +1,5 @@
-import AtButton from '../components/atoms/atButton/AtButton';
-import AtLoading from '../components/atoms/atLoading/AtLoading';
+import AtButton from '../components/atoms/AtButton/AtButton';
+import AtLoading from '../components/atoms/AtLoading/AtLoading';
 import SearchBar from '../components/molecules/SearchBar/SearchBar';
 import { getAllPokemons } from '../services/pokemon';
 

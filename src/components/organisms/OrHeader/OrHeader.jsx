@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from '../../../assets/logo/Pokeball-header-logo.png';
-import AtButton from "../../atoms/atButton/AtButton";
+import AtButton from "../../atoms/AtButton/AtButton";
 import SearchBar from "../../molecules/SearchBar/SearchBar";
 import { useNavigate } from "react-router-dom";
 

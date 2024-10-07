@@ -1,4 +1,4 @@
-import OrModal from '../components/organisms/orModal/orModal';
+import OrModal from '../components/organisms/OrModal/orModal';
 
 export default {
     component: OrModal,

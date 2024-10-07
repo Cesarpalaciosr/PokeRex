@@ -1,6 +1,5 @@
-import AtPokemonImage from '../../atoms/atPokemonImage/AtPokemonImage';
-import AtPokemonInfo from '../../atoms/atPokemonInfo/AtPokemonInfo';
-import { CardAnimation } from '../../../utils/keyFrames';
+import AtPokemonImage from '../../atoms/AtPokemonImage/AtPokemonImage';
+import AtPokemonInfo from '../../atoms/AtPokemonInfo/AtPokemonInfo';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
 

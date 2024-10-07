@@ -1,4 +1,4 @@
-import AtLoading from "../components/atoms/atLoading/AtLoading";
+import AtLoading from "../components/atoms/AtLoading/AtLoading";
 
 export default {
   component: AtLoading,

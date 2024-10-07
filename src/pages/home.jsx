@@ -1,5 +1,5 @@
-import OrHeader from "../components/organisms/orHeader/OrHeader";
-import OrPokemonGrid from "../components/organisms/orPokemonGrid/OrPokemonGrid";
+import OrHeader from "../components/organisms/OrHeader/OrHeader";
+import OrPokemonGrid from "../components/organisms/OrPokemonGrid/OrPokemonGrid";
 
 function HomePage () {
     return (

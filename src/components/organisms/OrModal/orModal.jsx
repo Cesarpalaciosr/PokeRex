@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import AtButton from '../../atoms/atButton/AtButton';
-import AtPokemonImage from '../../atoms/atPokemonImage/AtPokemonImage';
+import AtButton from '../../atoms/AtButton/AtButton';
+import AtPokemonImage from '../../atoms/AtPokemonImage/AtPokemonImage';
 import PropTypes from "prop-types";
-import AtPokemonInfo from '../../atoms/atPokemonInfo/AtPokemonInfo';
+import AtPokemonInfo from '../../atoms/AtPokemonInfo/AtPokemonInfo';
 
 
 function OrModal({handleClose, pokemon}) {

@@ -1,6 +1,6 @@
 import { fn } from "@storybook/test";
 
-import AtButton from "../components/atoms/atButton/AtButton";
+import AtButton from "../components/atoms/AtButton/AtButton";
 
 export const ActionsData = {
   onClick: fn(),
